@@ -1,0 +1,515 @@
+@font-face{
+    font-family: 'Raleway-EB';
+    src: url(../fonts/Raleway-ExtraBold.ttf);
+}
+
+@font-face{
+    font-family: 'Raleway-L';
+    src: url(../fonts/Raleway-Light.ttf);
+}
+
+@font-face{
+    font-family: 'Raleway-M';
+    src: url(../fonts/Raleway-Medium.ttf);
+}
+
+@font-face{
+    font-family: 'Raleway-B';
+    src: url(../fonts/Raleway-Bold.ttf);
+}
+
+* {box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* СТРУКТУРА */
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+/* РАЗБИВКА САЙТА НА КОЛОННЫ */
+
+[class^='col-'] {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-3 {
+    flex-basis: 25%;
+    max-width: 25%;
+}
+
+.col-4 {
+    flex-basis: 33.333333%;
+    max-width: 33.333333%;
+}
+
+.col-6 {
+    flex-basis: 50%;
+    max-width: 50%;
+}
+
+.col-12 {
+    flex-basis: 100%;
+    max-width: 100%;
+}
+
+/* ОБЩЕЕ */
+
+.text-center {
+    text-align: center;
+}
+
+h2 {
+    color: #606060;
+    font-family: 'Raleway-EB';
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+h2::before, h2::after {
+    content: '';
+    width: 82px;
+    height: 1px;
+    background-color: #e1e1e1;
+    display: block;
+    position: relative;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* ШАПКА */
+
+.shapka {
+    background-color: #f5f5f5;
+}
+
+.shapka > .container > .row{
+    height: 110px;
+    align-items: center;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu > li > a {
+    text-decoration: none;
+    font-family: 'Raleway-EB';
+    color: #606060;
+    font-size: 13px;
+}
+
+.menu > li > a:hover {
+    color: #1abb9c;
+    opacity: 50%;
+}
+
+.menu > li > a.active-shapka {
+    color: #1abb9c;
+}
+
+/* ПОД ШАПКОЙ */
+
+h1 {
+    margin-top: 70px;
+    font-family: 'Raleway-EB';
+    font-size: 35px;
+    color: #606060;
+}
+
+.pod-shapka > p {
+    font-size: 25px;
+    font-family: 'Raleway-L';
+    margin-bottom: 70px;
+    margin-top: 10px;
+    color: #606060;
+}
+
+/* СЛАЙДЕР */
+
+.white-fon-1 {
+    display: block;
+    padding: 20px 20px;
+    background-color: white;
+    position: absolute;
+    top: 67%;
+    left: 4%;
+}
+
+.white-fon-2 {
+    display: block;
+    padding: 20px 20px;
+    background-color: white;
+    position: absolute;
+    top: 80%;
+    left: 4%;
+}
+
+.sl-zag {
+    color: #606060;
+    font-family: 'Raleway-M';
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.sl-podzag {
+    color: #606060;
+    font-family: 'Raleway-M';
+    font-size: 16px;
+
+}
+
+.sl-podzag span {
+    color: #1abb9c;
+}
+
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+  
+.mySlides {
+    display: none;
+    position: relative;
+}
+  
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    display: flex;
+    height: 45px;
+    width: 45px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #656565;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+    background-color: white;
+}
+  
+.next {
+    right: 0;
+}
+  
+.prev:hover, .next:hover {
+    background-color: rgba(255,255,255,0.7);
+}
+  
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@-webkit-keyframes fade {
+    from {opacity: .7}
+    to {opacity: 1}
+}
+  
+@keyframes fade {
+    from {opacity: .7}
+    to {opacity: 1}
+}
+
+/* ЧТО МЫ ПРЕДЛАГАЕМ */
+
+.card {
+    border: 2px solid #1abb9c;
+    border-radius: 10px;
+    height: 305px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 80px;
+}
+
+.card p:nth-child(2) {
+    font-family: 'Raleway-EB';
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #606060;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.card p:nth-child(3) {
+    font-family: 'Raleway-M';
+    font-size: 14px;
+    color: #606060;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.card i {
+    color: #acacac;
+    font-size: 50px;
+}
+
+/* ПРОГРЕСС ЗАНЯТИЙ */
+
+.op > h2 {
+    color: #606060;
+    margin-bottom: 0px;
+}
+
+
+
+.op-text {
+    font-size: 14px;
+    font-family: 'Raleway-M';
+    width: 870px;
+    color: #acacac;
+}
+
+.op-center {
+    display: flex;
+    justify-content: center;
+    height: 408px;
+}
+
+.op-fon {
+    background-image: url(/img/Color\ Fill\ 1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.in-circle > p{
+    font-size: 14px;
+    font-family: 'Raleway-EB';
+    color: #dddddd;
+    text-transform: uppercase;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.in-c-c > i {
+    color: #1abb9c;
+    font-size: 50px;
+}
+
+.in-c-c {
+    display: flex;
+    height: 95px;
+    width: 95px;
+    border-radius: 50%;
+    border: 2px solid #1abb9c;
+    justify-content: center;
+    align-items: center;
+}
+
+.in-circle {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.op-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.op-ogr {
+    width: 1100px;
+    margin-bottom: 40px;
+}
+
+.op-line {
+    display: block;
+    height: 1px;
+    width: 150px;
+    background-color: #777777;
+    margin-bottom: 30px;
+}
+
+/* НАШИ ТРЕНЕРА */
+
+.or-card > p {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.or-card > p:nth-child(2){
+    font-size: 15px;
+    font-family: 'Raleway-EB';
+    color: #606060;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.or-card > p:nth-child(3){
+    font-size: 12px;
+    font-family: 'Raleway-M';
+    color: #1abb9c;
+}
+
+.or-card > p:nth-child(4){
+    font-size: 14px;
+    font-family: 'Raleway-M';
+    color: #606060;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+/* ПРИМЕРЫ НАШИХ */
+
+.ft img {
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.ft a:hover {
+    opacity: 80%;
+    transition: 0.4s;
+}
+
+.calendar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.vcalendar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 45px;
+    width: 45px;
+    border: 1px solid #b1b1b1;
+}
+
+.vcalendar > p:nth-child(1) {
+    font-family: 'Raleway-M';
+    font-size: 20px;
+    color: #b1b1b1;
+}
+
+.vcalendar > p:nth-child(2) {
+    font-family: 'Raleway-M';
+    font-size: 12px;
+    color: #b1b1b1;
+}
+
+.ryadkal > p:nth-child(1){
+    font-family: 'Raleway-EB';
+    font-size: 16px;
+    color: #b1b1b1;
+}
+
+.ryadkal > p:nth-child(2){
+    font-family: 'Raleway-M';
+    font-size: 12px;
+    color: #1abb9c;
+    margin-top: 5px;
+}
+
+.ryadkal {
+    margin-left: 15px;
+}
+
+.cal > p {
+    font-family: 'Raleway-M';
+    font-size: 14px;
+    color: #b1b1b1;
+    margin-top: 15px;
+    margin-bottom: 80px;
+}
+
+/* PODVAL */
+
+footer {
+    background-color: #333333;
+}
+
+footer p {
+    font-family: 'Raleway-M';
+    color: #cacaca;
+    font-size: 14px;
+}
+
+footer > .container {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* USLUGI */
+
+.usl {
+    margin-bottom: 30px;
+}
+
+.usl p {
+    font-family: 'Raleway-M';
+    font-size: 14px;
+    color: #606060;
+}
+
+.usl img {
+    border-radius: 10px;
+}
+
+.usl h2 {
+    margin-top: 140px;
+}
+
+/* РАСПИСАНИЕ */
+
+/* КОНТАКТЫ */
+
+.kon .col-12{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.kon img {
+    margin-bottom: 50px;
+}
+
+.kon p {
+    font-family: 'Raleway-M';
+    font-size: 14px;
+    color: #606060;
+    margin-bottom: 10px;
+}
+
+.kon .col-6 h2 {
+    margin-top: 120px;
+}
+
+.kon .col-12 h2 {
+    margin-top: 0px;
+}
